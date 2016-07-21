@@ -1,0 +1,312 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DE4CA2C11D415BE100467654 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4CA2C01D415BE100467654 /* AppDelegate.swift */; };
+		DE4CA2C31D415BE100467654 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4CA2C21D415BE100467654 /* ViewController.swift */; };
+		DE4CA2C61D415BE100467654 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE4CA2C41D415BE100467654 /* Main.storyboard */; };
+		DE4CA2C91D415BE100467654 /* Jungle_Sales.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DE4CA2C71D415BE100467654 /* Jungle_Sales.xcdatamodeld */; };
+		DE4CA2CB1D415BE100467654 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE4CA2CA1D415BE100467654 /* Assets.xcassets */; };
+		DE4CA2CE1D415BE100467654 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE4CA2CC1D415BE100467654 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		DE4CA2BD1D415BE100467654 /* Jungle Sales.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Jungle Sales.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE4CA2C01D415BE100467654 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DE4CA2C21D415BE100467654 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DE4CA2C51D415BE100467654 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DE4CA2C81D415BE100467654 /* Jungle_Sales.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Jungle_Sales.xcdatamodel; sourceTree = "<group>"; };
+		DE4CA2CA1D415BE100467654 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DE4CA2CD1D415BE100467654 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DE4CA2CF1D415BE100467654 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DE4CA2BA1D415BE100467654 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DE4CA2B41D415BE100467654 = {
+			isa = PBXGroup;
+			children = (
+				DE4CA2BF1D415BE100467654 /* Jungle Sales */,
+				DE4CA2BE1D415BE100467654 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DE4CA2BE1D415BE100467654 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DE4CA2BD1D415BE100467654 /* Jungle Sales.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DE4CA2BF1D415BE100467654 /* Jungle Sales */ = {
+			isa = PBXGroup;
+			children = (
+				DE4CA2C01D415BE100467654 /* AppDelegate.swift */,
+				DE4CA2C21D415BE100467654 /* ViewController.swift */,
+				DE4CA2C41D415BE100467654 /* Main.storyboard */,
+				DE4CA2CA1D415BE100467654 /* Assets.xcassets */,
+				DE4CA2CC1D415BE100467654 /* LaunchScreen.storyboard */,
+				DE4CA2CF1D415BE100467654 /* Info.plist */,
+				DE4CA2C71D415BE100467654 /* Jungle_Sales.xcdatamodeld */,
+			);
+			path = "Jungle Sales";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DE4CA2BC1D415BE100467654 /* Jungle Sales */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE4CA2D21D415BE100467654 /* Build configuration list for PBXNativeTarget "Jungle Sales" */;
+			buildPhases = (
+				DE4CA2B91D415BE100467654 /* Sources */,
+				DE4CA2BA1D415BE100467654 /* Frameworks */,
+				DE4CA2BB1D415BE100467654 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Jungle Sales";
+			productName = "Jungle Sales";
+			productReference = DE4CA2BD1D415BE100467654 /* Jungle Sales.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DE4CA2B51D415BE100467654 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Jacob Virgin";
+				TargetAttributes = {
+					DE4CA2BC1D415BE100467654 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = DE4CA2B81D415BE100467654 /* Build configuration list for PBXProject "Jungle Sales" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DE4CA2B41D415BE100467654;
+			productRefGroup = DE4CA2BE1D415BE100467654 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DE4CA2BC1D415BE100467654 /* Jungle Sales */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DE4CA2BB1D415BE100467654 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE4CA2CE1D415BE100467654 /* LaunchScreen.storyboard in Resources */,
+				DE4CA2CB1D415BE100467654 /* Assets.xcassets in Resources */,
+				DE4CA2C61D415BE100467654 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DE4CA2B91D415BE100467654 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE4CA2C91D415BE100467654 /* Jungle_Sales.xcdatamodeld in Sources */,
+				DE4CA2C31D415BE100467654 /* ViewController.swift in Sources */,
+				DE4CA2C11D415BE100467654 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		DE4CA2C41D415BE100467654 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DE4CA2C51D415BE100467654 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DE4CA2CC1D415BE100467654 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DE4CA2CD1D415BE100467654 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DE4CA2D01D415BE100467654 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		DE4CA2D11D415BE100467654 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DE4CA2D31D415BE100467654 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Jungle Sales/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.virgin.exposure.Jungle-Sales";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DE4CA2D41D415BE100467654 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Jungle Sales/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.virgin.exposure.Jungle-Sales";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DE4CA2B81D415BE100467654 /* Build configuration list for PBXProject "Jungle Sales" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE4CA2D01D415BE100467654 /* Debug */,
+				DE4CA2D11D415BE100467654 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DE4CA2D21D415BE100467654 /* Build configuration list for PBXNativeTarget "Jungle Sales" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE4CA2D31D415BE100467654 /* Debug */,
+				DE4CA2D41D415BE100467654 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		DE4CA2C71D415BE100467654 /* Jungle_Sales.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DE4CA2C81D415BE100467654 /* Jungle_Sales.xcdatamodel */,
+			);
+			currentVersion = DE4CA2C81D415BE100467654 /* Jungle_Sales.xcdatamodel */;
+			path = Jungle_Sales.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = DE4CA2B51D415BE100467654 /* Project object */;
+}
