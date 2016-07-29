@@ -13,6 +13,8 @@
 		DE4CA2C91D415BE100467654 /* Jungle_Sales.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DE4CA2C71D415BE100467654 /* Jungle_Sales.xcdatamodeld */; };
 		DE4CA2CB1D415BE100467654 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE4CA2CA1D415BE100467654 /* Assets.xcassets */; };
 		DE4CA2CE1D415BE100467654 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE4CA2CC1D415BE100467654 /* LaunchScreen.storyboard */; };
+		DE86318C1D4A78AA00114E3C /* HTTPRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE86318B1D4A78AA00114E3C /* HTTPRequests.swift */; };
+		DE86318E1D4BB1C300114E3C /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE86318D1D4BB1C300114E3C /* UserController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		DE4CA2CA1D415BE100467654 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DE4CA2CD1D415BE100467654 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DE4CA2CF1D415BE100467654 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE86318B1D4A78AA00114E3C /* HTTPRequests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPRequests.swift; sourceTree = "<group>"; };
+		DE86318D1D4BB1C300114E3C /* UserController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,10 +63,12 @@
 				DE4CA2C01D415BE100467654 /* AppDelegate.swift */,
 				DE4CA2C21D415BE100467654 /* ViewController.swift */,
 				DE4CA2C41D415BE100467654 /* Main.storyboard */,
+				DE86318D1D4BB1C300114E3C /* UserController.swift */,
 				DE4CA2CA1D415BE100467654 /* Assets.xcassets */,
 				DE4CA2CC1D415BE100467654 /* LaunchScreen.storyboard */,
 				DE4CA2CF1D415BE100467654 /* Info.plist */,
 				DE4CA2C71D415BE100467654 /* Jungle_Sales.xcdatamodeld */,
+				DE86318B1D4A78AA00114E3C /* HTTPRequests.swift */,
 			);
 			path = "Jungle Sales";
 			sourceTree = "<group>";
@@ -139,6 +145,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE4CA2C91D415BE100467654 /* Jungle_Sales.xcdatamodeld in Sources */,
+				DE86318C1D4A78AA00114E3C /* HTTPRequests.swift in Sources */,
+				DE86318E1D4BB1C300114E3C /* UserController.swift in Sources */,
 				DE4CA2C31D415BE100467654 /* ViewController.swift in Sources */,
 				DE4CA2C11D415BE100467654 /* AppDelegate.swift in Sources */,
 			);
@@ -292,6 +300,7 @@
 				DE4CA2D41D415BE100467654 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
