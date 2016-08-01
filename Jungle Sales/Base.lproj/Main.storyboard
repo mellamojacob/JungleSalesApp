@@ -83,8 +83,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="User Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xwq-a8-qMz">
-                                <rect key="frame" x="175" y="493" width="82" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add Company: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xwq-a8-qMz">
+                                <rect key="frame" x="140" y="493" width="117" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -99,10 +99,37 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SXg-ED-h1O">
+                                <rect key="frame" x="308" y="556" width="149" height="30"/>
+                                <state key="normal" title="Add company to User"/>
+                                <connections>
+                                    <action selector="AddCompanyButtonPressed:" destination="mTw-50-edI" eventType="touchUpInside" id="nXK-IT-MFk"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LVw-KQ-PFr">
+                                <rect key="frame" x="363" y="801" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w8o-pi-lbh">
+                                <rect key="frame" x="308" y="288" width="83" height="30"/>
+                                <state key="normal" title="Submit user"/>
+                                <connections>
+                                    <action selector="submitUserButtonPressed:" destination="mTw-50-edI" eventType="touchUpInside" id="0RZ-cx-VB8"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="companyField" destination="vYI-15-etX" id="2P2-ta-blp"/>
+                        <outlet property="emailField" destination="Tvs-PJ-vaW" id="lJe-pa-S9d"/>
+                        <outlet property="label" destination="LVw-KQ-PFr" id="nOf-MT-6PR"/>
+                        <outlet property="phoneNumberField" destination="hql-RY-shZ" id="m15-ki-KGf"/>
+                        <outlet property="userNameField" destination="MZZ-cX-zY4" id="cNN-g4-SlT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mq6-2Z-fmq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
