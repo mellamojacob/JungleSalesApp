@@ -6,8 +6,7 @@
 //  Copyright © 2016 Jacob Virgin. All rights reserved.
 //
 
-import Cocoa
-
+import Foundation 
 class UserController: UIViewController {
 
 }

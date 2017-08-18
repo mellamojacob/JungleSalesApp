@@ -8,249 +8,91 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     //INITIALIZERS
     
-    enum Tier: String {
-        case Voice2Voice
-        case Face2Face
-        case Proposal
-        case Contract
-    }
     
     
-    @IBOutlet weak var companyNameField: UITextField!
-    @IBOutlet weak var phoneNumberField: UITextField!
+    @IBOutlet weak var tableView: UITableView!
     
-    @IBOutlet weak var SalespersonField: UITextField!
-    
-    @IBOutlet weak var label: UILabel!
-    
-    @IBOutlet weak var tierSwitch: UISwitch!
-    
+  
     
     var selectedCompany: NSDictionary = [:]
+    var selectedCompanies: [NSDictionary] = []
+    var voice2voiceCompanies: [NSDictionary] = []
+    var face2faceCompanies: [NSDictionary] = []
     
     
-    @IBAction func Search(sender: AnyObject) {
-        getCompany()
-            if self.selectedCompany["company_number"] != nil {
-                self.companyNameField.text = self.selectedCompany["company_name"] as? String
-            }
-            if self.selectedCompany["phone_number"] != nil {
-                self.phoneNumberField.text = self.selectedCompany["phone_number"] as? String
-            }
-            print(self.selectedCompany["company_name"])
-            print(self.selectedCompany["phone_number"])
-            
-        
-        
-    }
     
-    
-    @IBAction func Submit(sender: AnyObject) {
-        submitCompany("", HTTPRequest: "POST", tier: Tier.Voice2Voice)
-        
-    }
-    
-    @IBAction func MoveUpTier(sender: AnyObject) {
-        label.hidden = true
-        let param = selectedCompany["_id"] as? String
-        var tier = Tier.Voice2Voice
-        if selectedCompany["tier"] != nil {
-            tier = convertToTier(selectedCompany["tier"] as! String)
-        }
-        tier = moveUpTier(tier)
-        
-        submitCompany(param!, HTTPRequest: "PUT", tier: tier)
-        
-        
-    }
-    
-    @IBAction func Update(sender: AnyObject) {
-        var param = ""
-        if selectedCompany["_id"] != nil {
-            param = (selectedCompany["_id"] as? String)!
-        }
-        var tier = Tier.Voice2Voice
-        if selectedCompany["tier"] != nil {
-         tier = convertToTier(selectedCompany["tier"] as! String)
-        }
-        submitCompany(param, HTTPRequest: "PUT", tier: tier)
-        
-    }
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        label.hidden = true
-        // Do any additional setup after loading the view, typically from a nib.
-    }
+        
+            HTTPRequests.getRequest(databaseToRequest: .companies, withSpecifications: "Voice2Voice", completionHandler: {
+                companies in
+                self.voice2voiceCompanies = companies
+                
+                DispatchQueue.main.async{
+                    self.tableView.reloadData()
+                    }
+ 
+            })
+        
+        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+
+        }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    func getCompany() {
-        label.hidden = true
-        let sendValue = companyNameField.text
+    
+   
+    
+    
+    
+    
+    
+    
+   
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        var param = ""
-        
-        if sendValue != nil {
-            
-            param = (sendValue?.stringByReplacingOccurrencesOfString(" ", withString: "%20"))!
-        }
-        
-        let scriptUrl = "http://localhost:3000/api/companies/"
-        
-        let urlWithParams = scriptUrl + param
-        
-        let finalUrl = NSURL(string: urlWithParams)
-        
-        let request = NSMutableURLRequest(URL: finalUrl!)
-        
-        request.HTTPMethod = "GET"
-        
-        let task = NSURLSession.sharedSession().dataTaskWithRequest(request) {data, response, error in
-            
-            if error != nil {
-                print("error=\(error)")
-                self.companyNameField.text = "The request did not return anything. Try something else!"
-                return
-            }
-            
-            let responseString = NSString(data: data!, encoding: NSUTF8StringEncoding)
-            print("response string is \(responseString)")
-            print(self.selectedCompany)
-            do {
-                if let convertedJsonIntoDict = try NSJSONSerialization.JSONObjectWithData(data!, options: []) as? NSDictionary{
-                    if convertedJsonIntoDict["companies"] != nil {
-                        if let myArray = convertedJsonIntoDict["companies"] as? NSArray {
-                            if myArray.count > 0 {
-                                self.selectedCompany = (myArray[0] as? NSDictionary)!
-                                print(self.selectedCompany)
-                                
-                            } else {
-                                self.label.text = "Nothing there bitch"
-                                self.label.hidden = false
-                            }
-                        }
-                    }
-                }
-            } catch let error as NSError {
-                print(error.localizedDescription)
-            }
-        }
-        task.resume()
+            return self.voice2voiceCompanies.count
         
     }
     
-    
-    func submitCompany(params: String, HTTPRequest: String, tier: Tier){
-        label.hidden = true
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let scriptUrl = "http://localhost:3000/api/companies/\(params)"
-        
-        print(scriptUrl)
-        
-        var bodyData: [String: AnyObject] = [:]
-        
-        if companyNameField.text != nil {
-            bodyData["company_name"] = companyNameField.text
-        }
-        if phoneNumberField.text != nil {
-            bodyData["phone_number"] = phoneNumberField.text
+        let cell : UITableViewCell = self.tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        cell.textLabel?.textColor = UIColor.black
+        if self.voice2voiceCompanies[(indexPath as NSIndexPath).row]["company_name"] != nil {
+            print("\(self.voice2voiceCompanies[(indexPath as NSIndexPath).row]["company_name"]!)")
+            cell.textLabel?.text = "\(self.voice2voiceCompanies[(indexPath as NSIndexPath).row]["company_name"]!)"
         }
         
-            bodyData["tier"] = tier.rawValue
-        
-        
-        
-        if SalespersonField.text != nil {
-            bodyData["salesperson"] = SalespersonField.text
-        }
-        
-        bodyData["_id"] = selectedCompany["_id"]
-        
-        
-        print(bodyData)
-        
-        let finalUrl = NSURL(string: scriptUrl)
-        
-        let request = NSMutableURLRequest(URL: finalUrl!)
-        
-        
-        request.HTTPMethod = HTTPRequest
-        
-        
-        print(request.HTTPMethod)
-        
-        let valid = NSJSONSerialization.isValidJSONObject(bodyData)
-        
-        do{
-            if valid {
-                request.HTTPBody = try NSJSONSerialization.dataWithJSONObject(bodyData, options: NSJSONWritingOptions.PrettyPrinted)
-                request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-                
-            }
-            
-            
-        } catch let error as NSError{
-            self.label.text = "request could not be parsed \(error)"
-            self.label.hidden = false
-        }
-        
-        print(request)
-        
-        let task = NSURLSession.sharedSession().dataTaskWithRequest(request) {
-            data, response, error in
-            if error != nil {
-                self.label.text = "Session failed"
-                self.label.hidden = false
-                return
-            }
-        }
-        
-        task.resume()
-        
-        
-        if label.hidden {
-            label.text = "Completed!"
-            label.hidden = false
-            companyNameField.text = ""
-            phoneNumberField.text = ""
-            SalespersonField.text = ""
-            
-        }
-        
+        return UITableViewCell()
     }
     
-    
-    func moveUpTier(tier: Tier) -> Tier {
-        switch tier {
-        case Tier.Voice2Voice: return Tier.Face2Face
-        case Tier.Face2Face: return Tier.Proposal
-        case Tier.Proposal: return Tier.Contract
-        default: return Tier.Voice2Voice
-            
-        }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let companyDict = voice2voiceCompanies[indexPath.row]
+        print(companyDict)
+        
+        let CompanyDetailVC = self.storyboard?.instantiateViewController(withIdentifier: "CompanyDetail") as! CompanyDetailVC
+        
+        
+        CompanyDetailVC.companyNameField.text = companyDict.object(forKey: "company_name") as? String
+        CompanyDetailVC.salespersonField.text = companyDict.object(forKey: "salesperson") as? String
+        CompanyDetailVC.phoneNumberField.text = companyDict.object(forKey: "phone_number") as? String
+        CompanyDetailVC.tierField.text = companyDict.object(forKey: "tier") as? String
+        
+        self.navigationController?.pushViewController(CompanyDetailVC, animated: true)
+        
     }
-    
-    func convertToTier(tier: String) -> Tier{
-        switch tier {
-        case "Voice2Voice" : return Tier.Voice2Voice
-        case "Face2Face": return Tier.Face2Face
-        case "Proposal": return Tier.Proposal
-        case "Contract": return Tier.Contract
-        default: return Tier.Voice2Voice
-        }
-    }
-    
-    
     
 }
-
